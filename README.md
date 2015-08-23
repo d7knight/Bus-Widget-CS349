@@ -1,7 +1,5 @@
 # User-Interfaces-cs349-Bus-Widget
 
-UserIDS: d7knight, m3knight
-
 
 School Directions App Features
 
