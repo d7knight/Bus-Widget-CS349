@@ -71,7 +71,44 @@ function mdk(userid, htmlId) {
             // getJSON can fail silently.  It may be better (and only slightly more work)
             // to use $.ajax -- or write your own version of getJSON that does not fail silently.
 			model.ready = false;
-            $.getJSON("https://cs349.student.cs.uwaterloo.ca:9410/api/v1/student/stdCourseDetails/" + userid,
+            var course1json = '{'
+                +'"title" : "Software Design and Architecture",'
+                +'"desc"  : 32,'
+                +'"type" : "LEC"'
+                +'"room" : "MC 4021"'
+                +'"time" : 1-2:30pm'
+                +'"days" : May 6 - July 27'
+                +'"id" : CS 446'
+                +'}';
+            var course2json = '{'
+                +'"title" : "Distributed Sytems",'
+                +'"desc"  : 32,'
+                +'"type" : "LEC"'
+                +'"room" : "RCH 306"'
+                +'"time" : 1-2:30pm'
+                +'"days" : May 6 - July 27'
+                +'"id" : CS 454'
+                +'}';
+            var course3json = '{'
+                +'"title" : "Computer Networks",'
+                +'"desc"  : 32,'
+                +'"type" : "LEC"'
+                +'"room" : "RCH 309"'
+                +'"time" : 1-2:30pm'
+                +'"days" : May 6 - July 27'
+                +'"id" : CS 456'
+                +'}';
+
+            that.addCourse(that.createCourse("Databases", "Topics include: Relation Algebra, SQL, etc ",
+                "MC 4020", "2-3:30pm", "May 6- July 27", "LEC", "CS348"));
+            that.addCourse(that.createCourse("Algorithms", "Topics include; Dynamic Programming, Algorithm Runtime Analysis, etc",
+                "RCH 4020", "1-2:30pm", "May 6- July 27", "LEC", "CS341"));
+            that.addCourse(that.createCourse("Testing", "Topics include: Unit Testing, Regression Testing, Various Coverage Techniques ...  ",
+                "QNC 4020", "10-11:30pm", "May 6- July 27", "LEC", "CS447"));
+            that.setSelectedCourse(0);
+            that.updateViews("course");
+            model.ready = true;
+            /*$.getJSON("https://cs349.student.cs.uwaterloo.ca:9410/api/v1/student/stdCourseDetails/" + userid,
                 function(d) {
                     if (d.meta.status === "200 OK") {
                         var allterms = d.result.terms;
@@ -115,7 +152,7 @@ function mdk(userid, htmlId) {
                         that.updateViews("error");
                         //console.log("Failed to read course data." + JSON.stringify(d.meta));
                     }
-                });
+                });*/
 
         },
         loadBuildings: function() {
@@ -124,7 +161,7 @@ function mdk(userid, htmlId) {
             // getJSON can fail silently.  It may be better (and only slightly more work)
             // to use $.ajax -- or write your own version of getJSON that does not fail silently.
 
-            $.getJSON("https://api.uwaterloo.ca/v2/buildings/list.JSON?key=0dbaf7b7fe4f620a228d5e58343b2d06",
+        /*    $.getJSON("https://api.uwaterloo.ca/v2/buildings/list.JSON?key=0dbaf7b7fe4f620a228d5e58343b2d06",
                 function(d) {
                     if (d.meta.status === 200) {
                      //   //console.log("Success to get the buildings list");
@@ -135,7 +172,7 @@ function mdk(userid, htmlId) {
                         that.updateViews("error");
                      //   //console.log("Failed to get building list" + JSON.stringify(d.meta));
                     }
-                });
+                });*/
 
 
         },
