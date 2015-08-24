@@ -50,12 +50,11 @@ mode buttons and a view for the directions received from Google Maps API. Our co
 the buttons and the change listener on the address input box. Like most MVC implementations, when the views are interacted with,
 the controller handles it and sends information to the model which then updates the other views.
 
+
 <br>
-<a href="https://d7knight.github.io/uiproject/a4.html">Demo </a>
+<a href="/proposal/a4_proposal.pdf">Proposal Document </a>
 <br>
-<a href="/proposal/a4_proposal.pdf">Proposal </a>
-<br>
-<a href="https://d7knight.github.io/uiproject/a4.html" Demo of School Directions App</a>
+<a href="https://d7knight.github.io/uiproject/a4.html"> Demo of School Directions App</a>
 
 
 
