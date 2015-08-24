@@ -7,6 +7,12 @@ Our school directions widget gives you travelling directions from any location t
 One can travel via bus, car, walking or cycling with our widget. Overall, considering neither of us have previous web
 development experience, the two of us are very happy with the end result of this assignment and we hope you are too.
 
+
+
+
+<img align="right" src="images/demo.png">
+
+
 How to use it
 
 To use our widget start by entering in your address, which can be 
@@ -23,6 +29,10 @@ Changing the mode of transportation or selected course will cause the directions
 options. Under the transit mode of transportation you can get directions to travel to your selected course via
 Grand River Transit or Go Transit or even by train if you're from outside of Waterloo.  
 
+
+
+
+
 How it Works
 
 Our widget uses two of UW's services, one to get information about your current courses and uses another to
@@ -34,8 +44,17 @@ gecoded also using Google API's.
 
 MVC
 
-We use the MVC design pattern we learned in class for our widget. Our model stores all the data pertaining to your courses,
+We used the MVC design pattern we learned in class for our widget. Our model stores all the data pertaining to your courses,
 the user's address and course building information. We have several views including a view for the input box, course buttons,
 mode buttons and a view for the directions received from Google Maps API. Our controllers are the click listeners for each of
 the buttons and the change listener on the address input box. Like most MVC implementations, when the views are interacted with,
 the controller handles it and sends information to the model which then updates the other views.
+
+
+<br>
+<a href="/proposal/a4_proposal.pdf">Proposal Document </a>
+<br>
+<a href="https://d7knight.github.io/uiproject/a4.html"> Demo of School Directions App</a>
+
+
+
